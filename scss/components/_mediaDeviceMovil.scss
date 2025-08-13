@@ -1,0 +1,60 @@
+@use "../utilities/mixins";
+@use "../utilities/variables";
+
+// movil design
+
+@media (max-width: 450px) {
+  .navbar {
+    .container-fluid {
+      @include mixins.flex-container(row, flex-start, center);
+
+      .navbar-toggler {
+        @include mixins.flex-container(row, center, center);
+        gap: 8px;
+        border: 0 ;
+        .menu-text {
+          font-size: variables.$font-size-menu-text;
+        }
+        .button-style {
+          @include mixins.flex-container(none, center, center);
+          @include mixins.logo-size(10px, 10px);
+          border: 0 solid white;
+        }
+      }
+    }
+  }
+ 
+
+  .navbar-collapse {
+    font-size: variables.$font-size-nav-movil;
+    @include mixins.flex-container(column, space-between, start);
+    gap: 10px;
+    .navbar-nav {
+      gap: 5px;
+    }
+  }
+
+  //   view1
+
+  .nav-about {
+    font-size: variables.$font-size-nav-movil;
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  .view-container {
+    @include mixins.flex-container(none, center, center);
+
+    .img-style {
+      position: relative;
+      @include mixins.img-style(400px, 200px, cover);
+
+      // como cuadrar el centro
+    }
+    h1 {
+      position: absolute;
+      color: #ff764d;
+      font-size: variables.$font-size-h1-movil;
+    }
+  }
+}

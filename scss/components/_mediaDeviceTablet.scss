@@ -1,0 +1,98 @@
+@use "../utilities/mixins";
+@use "../utilities/variables";
+
+// tablet design
+
+@media (min-width: 451px) and (max-width: 1024px) {
+  .navbar {
+    .navbar-nav{
+        display: none;
+    }
+    .container-fluid {
+      @include mixins.flex-container(row, flex-start, center);
+
+      .navbar-toggler {
+        @include mixins.flex-container(row, center, center);
+        gap: 8px;
+        border: 0 ;
+        .menu-text {
+          font-size: variables.$font-size-menu-text;
+        }
+        .button-style {
+          @include mixins.flex-container(none, center, center);
+          @include mixins.logo-size(10px, 10px);
+          border: 0 solid white;
+        }
+      }
+    }
+  }
+
+  .container-fluid {
+  padding: 5px 30px 5px 30px;
+  background: #ffffff;
+}
+
+.navbar-toggler {
+  border: none;               /* Quita borde */
+  background: transparent;    /* Fondo transparente siempre */
+  padding: 0.5rem 1rem;        /* Ajusta espacio interno */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  box-shadow: none;           /* Quita el halo azul feo */
+  background: transparent;    /* Evita que se pinte al presionar */
+}
+
+.navbar-toggler.collapsed {
+  background: transparent;    /* También cuando está colapsado */
+}
+
+/* Cuando el menú está abierto */
+.container-fluid:has(.collapse.show) {
+  .logo-nav {
+    fill: #ffffff;
+  }
+  .navbar-toggler {
+
+    .menu-text {
+      color: white;
+    }
+    .button-style {
+      fill: #ffffff;
+    }
+  }
+  background-color: #0000ff; /* color al abrir */
+  .nav-link {
+    color: #ffffff;
+  }
+  .navbar {
+    position: relative;
+    z-index: 10;
+  }}
+
+
+  //   view1
+
+  .nav-about {
+    font-size: variables.$font-size-nav-tablet;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .view-container {
+    @include mixins.flex-container(none, center, center);
+
+    .img-style {
+      position: relative;
+      @include mixins.img-style(800px, 300px, cover);
+
+      // como cuadrar el centro
+    }
+    h1 {
+      position: absolute;
+      color: #ff764d;
+      font-size: variables.$font-size-h1-tablet;
+    }
+  }
+}

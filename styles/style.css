@@ -1,0 +1,301 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+}
+
+.navbar-brand .logo-nav {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  fill: #000000;
+}
+
+.navbar-collapse {
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-collapse .navbar-nav {
+  margin: 0;
+  gap: 20px;
+}
+.navbar-collapse .navbar-nav .nav-item .active {
+  color: #000000;
+  font-style: bold;
+}
+.navbar-collapse .navbar-nav .nav-item .active2 {
+  color: #0000ff;
+}
+
+.bg-body-tertiary {
+  background-color: rgba(118, 113, 113, 0.2392156863) !important;
+  margin: -6px;
+  padding: 1px;
+}
+
+.container-fluid {
+  padding: 5px 30px 5px 30px;
+  background: #ffffff;
+}
+
+.nav-link {
+  color: #000000;
+}
+
+.nav-about {
+  font-size: 15px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+.nav-about li {
+  list-style-type: none;
+}
+.nav-about .n-link {
+  color: #000000;
+  text-decoration: none;
+}
+.nav-about .active {
+  color: #ff764d;
+}
+
+.view-container {
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
+}
+.view-container .img-style {
+  position: relative;
+  width: 900px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.view-container h1 {
+  position: absolute;
+  color: #ff764d;
+  font-size: 100px;
+}
+
+.navbar-toggler .button-style {
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) .button-style {
+  transform: rotate(180deg);
+}
+
+.container-fluid {
+  background-color: white; /* color inicial */
+  transition: background-color 0.1s ease; /* transición suave */
+}
+
+.button-style .navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler {
+  border: none; /* Quita borde */
+  background: transparent; /* Fondo transparente siempre */
+  padding: 0.5rem 1rem; /* Ajusta espacio interno */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  box-shadow: none; /* Quita el halo azul feo */
+  background: transparent; /* Evita que se pinte al presionar */
+}
+
+.navbar-toggler.collapsed {
+  background: transparent; /* También cuando está colapsado */
+}
+
+/* Cuando el menú está abierto */
+.container-fluid:has(.collapse.show) {
+  background-color: #0000ff; /* color al abrir */
+}
+.container-fluid:has(.collapse.show) .logo-nav {
+  fill: #ffffff;
+}
+.container-fluid:has(.collapse.show) .navbar-toggler .menu-text {
+  color: white;
+}
+.container-fluid:has(.collapse.show) .navbar-toggler .button-style {
+  fill: #ffffff;
+}
+.container-fluid:has(.collapse.show) .nav-link {
+  color: #ffffff;
+}
+.container-fluid:has(.collapse.show) .navbar {
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 450px) {
+  .navbar .container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .navbar .container-fluid .navbar-toggler {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+  }
+  .navbar .container-fluid .navbar-toggler .menu-text {
+    font-size: 14px;
+  }
+  .navbar .container-fluid .navbar-toggler .button-style {
+    display: flex;
+    flex-direction: none;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    border: 0 solid white;
+  }
+  .navbar-collapse {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+  }
+  .navbar-collapse .navbar-nav {
+    gap: 5px;
+  }
+  .nav-about {
+    font-size: 16px;
+    padding-top: 20px;
+    gap: 10px;
+  }
+  .view-container {
+    display: flex;
+    flex-direction: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .view-container .img-style {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .view-container h1 {
+    position: absolute;
+    color: #ff764d;
+    font-size: 50px;
+  }
+}
+@media (min-width: 451px) and (max-width: 1024px) {
+  .navbar .navbar-nav {
+    display: none;
+  }
+  .navbar .container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .navbar .container-fluid .navbar-toggler {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+  }
+  .navbar .container-fluid .navbar-toggler .menu-text {
+    font-size: 14px;
+  }
+  .navbar .container-fluid .navbar-toggler .button-style {
+    display: flex;
+    flex-direction: none;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    border: 0 solid white;
+  }
+  .container-fluid {
+    padding: 5px 30px 5px 30px;
+    background: #ffffff;
+  }
+  .navbar-toggler {
+    border: none; /* Quita borde */
+    background: transparent; /* Fondo transparente siempre */
+    padding: 0.5rem 1rem; /* Ajusta espacio interno */
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    box-shadow: none; /* Quita el halo azul feo */
+    background: transparent; /* Evita que se pinte al presionar */
+  }
+  .navbar-toggler.collapsed {
+    background: transparent; /* También cuando está colapsado */
+  }
+  /* Cuando el menú está abierto */
+  .container-fluid:has(.collapse.show) {
+    background-color: #0000ff; /* color al abrir */
+  }
+  .container-fluid:has(.collapse.show) .logo-nav {
+    fill: #ffffff;
+  }
+  .container-fluid:has(.collapse.show) .navbar-toggler .menu-text {
+    color: white;
+  }
+  .container-fluid:has(.collapse.show) .navbar-toggler .button-style {
+    fill: #ffffff;
+  }
+  .container-fluid:has(.collapse.show) .nav-link {
+    color: #ffffff;
+  }
+  .container-fluid:has(.collapse.show) .navbar {
+    position: relative;
+    z-index: 10;
+  }
+  .nav-about {
+    font-size: 13px;
+    padding-top: 20px;
+    gap: 20px;
+  }
+  .view-container {
+    display: flex;
+    flex-direction: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .view-container .img-style {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .view-container h1 {
+    position: absolute;
+    color: #ff764d;
+    font-size: 80px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

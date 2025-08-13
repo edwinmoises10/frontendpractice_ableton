@@ -1,0 +1,37 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.nav-about {
+  font-size: variables.$font-size-nav;
+  padding-top: 20px;
+  @include mixins.flex-container(row, flex-start, center);
+  gap: 40px;
+  li {
+    list-style-type: none;
+  }
+  .n-link {
+    color: #000000;
+    text-decoration: none;
+  }
+  .active {
+    color: #ff764d;
+  }
+}
+
+
+.view-container {
+  @include mixins.flex-container(none, center, center);
+
+  .img-style {
+    position: relative;
+    @include mixins.img-style(900px, 400px, cover);
+    border-radius: 10px;
+
+    // como cuadrar el centro
+  }
+  h1 {
+    position: absolute;
+    color: #ff764d;
+    font-size: variables.$font-size-h1;
+  }
+}

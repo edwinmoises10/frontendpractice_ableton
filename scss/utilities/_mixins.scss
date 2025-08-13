@@ -1,0 +1,22 @@
+// mixins
+
+@mixin logo-size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin img-style($width, $height, $img_aspect) {
+  width: $width;
+  height: $height;
+  object-fit: $img_aspect;
+}
+
+@mixin logo-style($img_aspect) {
+  object-fit: $img_aspect;
+}
+
+@mixin flex-container($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

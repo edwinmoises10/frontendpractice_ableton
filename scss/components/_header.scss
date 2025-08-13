@@ -1,0 +1,46 @@
+@use "../utilities/mixins";
+@use "../utilities/variables";
+
+// Header Style
+
+.navbar-brand {
+  .logo-nav {
+    @include mixins.logo-size(50px, 50px);
+    @include mixins.logo-style(cover);
+    fill: #000000;
+  }
+}
+
+.navbar-collapse {
+  font-size: variables.$font-size-nav;
+  @include mixins.flex-container(row, space-between, center);
+  .navbar-nav {
+    margin: 0;
+    // @include mixins.flex-container(row, center, center);
+    gap: 20px;
+    .nav-item {
+      .active {
+        color: #000000;
+        font-style: bold;
+      }
+      .active2 {
+        color:#0000ff;
+      }
+      
+    }
+  }
+}
+// Color NavBar
+.bg-body-tertiary {
+  background-color: #7671713d !important;
+  margin: -6px;
+  padding: 1px;
+}
+.container-fluid {
+  padding: 5px 30px 5px 30px;
+  background: #ffffff;
+}
+.nav-link {
+  color: #000000;
+}
+

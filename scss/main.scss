@@ -1,0 +1,22 @@
+
+
+@use "./base/reset";
+@use "./base/font";
+
+
+
+// components
+@use "./components/header";
+@use "./components/view1";
+@use "./components/animations";
+
+// responsive
+@use "./components/mediaDeviceMovil";
+@use "./components/mediaDeviceTablet";
+
+
+// Utilities
+
+@use "./utilities/mixins";
+@use "./utilities/variables";
+
