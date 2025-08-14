@@ -14,24 +14,25 @@
     text-decoration: none;
   }
   .active {
-    color: #ff764d;
+    color: #f5562f;
+    font-weight: 400;
   }
 }
 
-
 .view-container {
+  padding-top: 10px;
   @include mixins.flex-container(none, center, center);
 
   .img-style {
     position: relative;
-    @include mixins.img-style(900px, 400px, cover);
+    @include mixins.img-style(1000px, 400px, cover);
     border-radius: 10px;
 
     // como cuadrar el centro
   }
   h1 {
     position: absolute;
-    color: #ff764d;
+    color: #f5562f;
     font-size: variables.$font-size-h1;
   }
 }

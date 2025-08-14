@@ -7,11 +7,18 @@
   .navbar {
     .container-fluid {
       @include mixins.flex-container(row, flex-start, center);
+      .navbar-brand {
+        .logo-nav {
+          @include mixins.logo-size(30px, 30px);
+        }
+      }
 
       .navbar-toggler {
-        @include mixins.flex-container(row, center, center);
-        gap: 8px;
-        border: 0 ;
+        @include mixins.flex-container(none, center, center);
+
+        margin: 0;
+        gap: 10px;
+        @include mixins.flex-container(row, flex-start, center);
         .menu-text {
           font-size: variables.$font-size-menu-text;
         }
@@ -23,7 +30,6 @@
       }
     }
   }
- 
 
   .navbar-collapse {
     font-size: variables.$font-size-nav-movil;
@@ -47,7 +53,7 @@
 
     .img-style {
       position: relative;
-      @include mixins.img-style(400px, 200px, cover);
+      @include mixins.img-style(300px, 500px, cover);
 
       // como cuadrar el centro
     }

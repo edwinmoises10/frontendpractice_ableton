@@ -14,25 +14,25 @@
   transition: background-color 0.1s ease; /* transición suave */
 }
 
-.button-style{
-    .navbar-toggler{
-        border: none;
-    }
+.button-style {
+  .navbar-toggler {
+    border: none;
+  }
 }
 .navbar-toggler {
-  border: none;               /* Quita borde */
-  background: transparent;    /* Fondo transparente siempre */
-  padding: 0.5rem 1rem;        /* Ajusta espacio interno */
+  border: none; /* Quita borde */
+  background: transparent; /* Fondo transparente siempre */
+  padding: 0.5rem 1rem; /* Ajusta espacio interno */
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:active {
-  box-shadow: none;           /* Quita el halo azul feo */
-  background: transparent;    /* Evita que se pinte al presionar */
+  box-shadow: none; /* Quita el halo azul feo */
+  background: transparent;
 }
 
 .navbar-toggler.collapsed {
-  background: transparent;    /* También cuando está colapsado */
+  background: transparent; /* También cuando está colapsado */
 }
 
 /* Cuando el menú está abierto */
@@ -41,7 +41,6 @@
     fill: #ffffff;
   }
   .navbar-toggler {
-
     .menu-text {
       color: white;
     }
