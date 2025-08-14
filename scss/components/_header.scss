@@ -17,7 +17,7 @@
   .navbar-nav {
     margin: 0;
     // @include mixins.flex-container(row, center, center);
-    gap: 20px;
+    gap: 10px;
     .nav-item {
       .active {
         color: #000000;

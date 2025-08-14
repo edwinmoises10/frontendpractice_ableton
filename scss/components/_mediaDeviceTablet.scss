@@ -6,13 +6,11 @@
 @media (min-width: 451px) and (max-width: 1024px) {
   .navbar {
     .navbar-nav {
-      display:contents;
       .container-fluid {
         @include mixins.flex-container(row, flex-start, center);
 
         .navbar-toggler {
           @include mixins.flex-container(row, center, center);
-          gap: 8px;
           border: 0;
           .menu-text {
             font-size: variables.$font-size-menu-text;
@@ -20,12 +18,20 @@
           .button-style {
             @include mixins.flex-container(none, center, center);
             @include mixins.logo-size(10px, 10px);
-            border: 0 solid white;
           }
         }
       }
     }
   }
+
+
+
+  /* Menú cerrado */
+  .navbar-collapse:not(.show) .navbar-nav {
+    gap: 2px;
+  }
+
+
   .navbar-toggler:not(.collapsed) .button-style {
     display: none;
   }
@@ -87,7 +93,7 @@
 
     .img-style {
       position: relative;
-      @include mixins.img-style(800px, 300px, cover);
+      @include mixins.img-style(800px, 500px, cover);
 
       // como cuadrar el centro
     }
