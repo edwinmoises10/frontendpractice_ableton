@@ -9,7 +9,7 @@
       @include mixins.flex-container(row, flex-start, center);
       .navbar-brand {
         .logo-nav {
-          @include mixins.logo-size(30px, 30px);
+          @include mixins.logo-size(40px, 40px);
         }
       }
 
@@ -21,6 +21,7 @@
         @include mixins.flex-container(row, flex-start, center);
         .menu-text {
           font-size: variables.$font-size-menu-text;
+          margin-left: -18px; /* opcional, más cerca del logo */
         }
         .button-style {
           @include mixins.flex-container(none, center, center);
@@ -38,6 +39,10 @@
     .navbar-nav {
       gap: 5px;
     }
+  }
+  /* Menú cerrado */
+  .navbar-collapse:not(.show) .navbar-nav {
+    gap: 2px;
   }
 
   //   view1

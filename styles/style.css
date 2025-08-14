@@ -156,8 +156,8 @@ body {
     align-items: center;
   }
   .navbar .container-fluid .navbar-brand .logo-nav {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
   .navbar .container-fluid .navbar-toggler {
     display: flex;
@@ -173,6 +173,7 @@ body {
   }
   .navbar .container-fluid .navbar-toggler .menu-text {
     font-size: 14px;
+    margin-left: -18px; /* opcional, más cerca del logo */
   }
   .navbar .container-fluid .navbar-toggler .button-style {
     display: flex;
@@ -193,6 +194,10 @@ body {
   }
   .navbar-collapse .navbar-nav {
     gap: 5px;
+  }
+  /* Menú cerrado */
+  .navbar-collapse:not(.show) .navbar-nav {
+    gap: 2px;
   }
   .nav-about {
     font-size: 16px;
