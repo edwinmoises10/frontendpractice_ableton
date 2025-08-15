@@ -3,44 +3,46 @@
 
 // Header Style
 
-.navbar-brand {
-  .logo-nav {
-    @include mixins.logo-size(50px, 50px);
-    @include mixins.logo-style(cover);
-    fill: #000000;
-  }
-}
-
 .navbar-collapse {
   font-size: variables.$font-size-nav;
+  line-height: 1.5;
   @include mixins.flex-container(row, space-between, center);
   .navbar-nav {
-    margin: 0;
+    // margin: 0;
     // @include mixins.flex-container(row, center, center);
-    gap: 10px;
+    gap: 25px; // separacion header
     .nav-item {
       .active {
         color: #000000;
         font-style: bold;
       }
       .active2 {
-        color:#0000ff;
+        color: #0000ff;
       }
-      
     }
   }
 }
+.dropdown-toggle::after {
+  display: none;
+}
+
 // Color NavBar
 .bg-body-tertiary {
-  background-color: #7671713d !important;
-  margin: -6px;
-  padding: 1px;
+  background-color: #7671713d;
+  // margin: -6px;
+  // padding: 1px;
 }
 .container-fluid {
-  padding: 5px 30px 5px 30px;
+  .navbar-brand {
+    .logo-nav {
+      @include mixins.logo-size(50px, 50px);
+      @include mixins.logo-style(cover);
+      fill: #000000;
+    }
+  }
+  padding: 0 30px 0 30px;
   background: #ffffff;
 }
 .nav-link {
   color: #000000;
 }
-

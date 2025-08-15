@@ -4,11 +4,18 @@
 // tablet design
 
 @media (min-width: 451px) and (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
   .navbar {
     .navbar-nav {
       .container-fluid {
         @include mixins.flex-container(row, flex-start, center);
-
+        .navbar-brand {
+          .logo-nav {
+            @include mixins.logo-size(40px, 40px);
+          }
+        }
         .navbar-toggler {
           @include mixins.flex-container(row, center, center);
           border: 0;
@@ -24,24 +31,40 @@
     }
   }
 
-
-
   /* Menú cerrado */
   .navbar-collapse:not(.show) .navbar-nav {
     gap: 2px;
   }
 
-
-  .navbar-toggler:not(.collapsed) .button-style {
-    display: none;
+  // .navbar-toggler:not(.collapsed) .button-style {
+  //   display: none;
+  // }
+  .navbar-toggler {
+    font-size: 16px;
+    .button-style {
+      fill: #000000;
+    }
   }
 
   .container-fluid {
+    @include mixins.flex-container(row, flex-start !important, center);
+
     padding: 5px 30px 5px 30px;
     background: #ffffff;
   }
+  .navbar-collapse {
+    @include mixins.flex-container(row, start, start);
+    flex-wrap: wrap;
+    gap: 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* transición suave y profesional */
+
+    .navbar-nav {
+      gap: 5px;
+    }
+  }
 
   .navbar-toggler {
+
     border: none; /* Quita borde */
     background: transparent; /* Fondo transparente siempre */
     padding: 0.5rem 1rem; /* Ajusta espacio interno */
@@ -55,6 +78,9 @@
 
   .navbar-toggler.collapsed {
     background: transparent; /* También cuando está colapsado */
+  }
+  .menu-text {
+    color: #000000;
   }
 
   /* Cuando el menú está abierto */
@@ -93,7 +119,7 @@
 
     .img-style {
       position: relative;
-      @include mixins.img-style(800px, 500px, cover);
+      @include mixins.img-style(650px, 450px, cover);
 
       // como cuadrar el centro
     }

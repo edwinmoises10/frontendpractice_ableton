@@ -10,25 +10,24 @@ body {
   font-optical-sizing: auto;
   font-weight: 400px;
   font-style: normal;
+  background-color: rgba(128, 128, 128, 0.211);
+  padding: 0 20px 0 20px;
 }
 
-.navbar-brand .logo-nav {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  fill: #000000;
+main {
+  background-color: #ffffff;
 }
 
 .navbar-collapse {
-  font-size: 15px;
+  font-size: 1 rem;
+  line-height: 1.5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .navbar-collapse .navbar-nav {
-  margin: 0;
-  gap: 10px;
+  gap: 25px;
 }
 .navbar-collapse .navbar-nav .nav-item .active {
   color: #000000;
@@ -38,15 +37,23 @@ body {
   color: #0000ff;
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
 .bg-body-tertiary {
-  background-color: rgba(118, 113, 113, 0.2392156863) !important;
-  margin: -6px;
-  padding: 1px;
+  background-color: rgba(118, 113, 113, 0.2392156863);
 }
 
 .container-fluid {
-  padding: 5px 30px 5px 30px;
+  padding: 0 30px 0 30px;
   background: #ffffff;
+}
+.container-fluid .navbar-brand .logo-nav {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  fill: #000000;
 }
 
 .nav-link {
@@ -54,7 +61,7 @@ body {
 }
 
 .nav-about {
-  font-size: 15px;
+  font-size: 1 rem;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
@@ -83,8 +90,8 @@ body {
 }
 .view-container .img-style {
   position: relative;
-  width: 1000px;
-  height: 400px;
+  width: 1400px;
+  height: 900px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -92,6 +99,79 @@ body {
   position: absolute;
   color: #f5562f;
   font-size: 150px;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.about-section .container {
+  padding-right: 100px;
+  padding-left: 100px;
+  text-align: justify;
+}
+.about-section .container .about-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+}
+.about-section .container .about-text .product-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0048ff;
+}
+.about-section .container .about-text .product-link:hover {
+  cursor: pointer;
+}
+.about-section .container .about-text1 {
+  font-size: 0.9rem;
+  color: rgba(44, 44, 44, 0.8);
+  letter-spacing: -0.3px;
+}
+
+.container-section .background-continer-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: " space1 space2";
+  height: 100%;
+}
+.container-section .background-continer-div .space1 {
+  grid-area: space1;
+  background: #985c0d;
+  height: 750px;
+}
+.container-section .background-continer-div .space2 {
+  grid-area: space2;
+  background: #fbffa7;
+  height: 750px;
+  padding-left: 500px;
+}
+.container-section .background-continer-div .space1 {
+  background: none;
+}
+.container-section .background-continer-div .continer-div {
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.container-section .background-continer-div .continer-div .pic-style {
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+}
+.container-section .background-continer-div .continer-div .pic-style1 {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
 }
 
 .navbar-toggler .button-style {
@@ -148,7 +228,26 @@ body {
   z-index: 10;
 }
 
+li:not(.no-selection)::selection,
+a:not(.no-selection)::selection {
+  background-color: #0000ff;
+  color: #ffffff;
+}
+
+.no-select::selection,
+.no-selection::selection {
+  background-color: transparent;
+}
+
+.no-select {
+  cursor: default;
+  user-select: none;
+}
+
 @media (max-width: 450px) {
+  body {
+    padding: 0;
+  }
   .navbar .container-fluid {
     display: flex;
     flex-direction: row;
@@ -173,7 +272,7 @@ body {
   }
   .navbar .container-fluid .navbar-toggler .menu-text {
     font-size: 14px;
-    margin-left: -18px; /* opcional, más cerca del logo */
+    margin-left: -18px; /*  más cerca del logo */
   }
   .navbar .container-fluid .navbar-toggler .button-style {
     display: flex;
@@ -223,11 +322,18 @@ body {
   }
 }
 @media (min-width: 451px) and (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
   .navbar .navbar-nav .container-fluid {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+  }
+  .navbar .navbar-nav .container-fluid .navbar-brand .logo-nav {
+    width: 40px;
+    height: 40px;
   }
   .navbar .navbar-nav .container-fluid .navbar-toggler {
     display: flex;
@@ -251,12 +357,31 @@ body {
   .navbar-collapse:not(.show) .navbar-nav {
     gap: 2px;
   }
-  .navbar-toggler:not(.collapsed) .button-style {
-    display: none;
+  .navbar-toggler {
+    font-size: 16px;
+  }
+  .navbar-toggler .button-style {
+    fill: #000000;
   }
   .container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start !important;
+    align-items: center;
     padding: 5px 30px 5px 30px;
     background: #ffffff;
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* transición suave y profesional */
+  }
+  .navbar-collapse .navbar-nav {
+    gap: 5px;
   }
   .navbar-toggler {
     border: none; /* Quita borde */
@@ -270,6 +395,9 @@ body {
   }
   .navbar-toggler.collapsed {
     background: transparent; /* También cuando está colapsado */
+  }
+  .menu-text {
+    color: #000000;
   }
   /* Cuando el menú está abierto */
   .container-fluid:has(.collapse.show) {
@@ -304,8 +432,8 @@ body {
   }
   .view-container .img-style {
     position: relative;
-    width: 800px;
-    height: 500px;
+    width: 650px;
+    height: 450px;
     object-fit: cover;
   }
   .view-container h1 {
