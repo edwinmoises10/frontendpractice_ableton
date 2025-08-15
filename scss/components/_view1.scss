@@ -19,16 +19,13 @@
   }
 }
 
-
-
-
 .view-container {
   padding-top: 10px;
   @include mixins.flex-container(none, center, center);
 
   .img-style {
     position: relative;
-    @include mixins.img-style(1000px, 400px, cover);
+    @include mixins.img-style(1400px, 900px, cover);
     border-radius: 10px;
 
     // como cuadrar el centro
@@ -37,5 +34,70 @@
     position: absolute;
     color: #f5562f;
     font-size: variables.$font-size-h1;
+  }
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+
+  .container {
+    padding-right: 100px;
+    padding-left: 100px;
+    text-align: justify;
+
+    .about-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      letter-spacing: -0.3px;
+
+      .product-link {
+        text-decoration: none;
+        font-weight: bold;
+        color: #0048ff;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .about-text1 {
+      font-size: 0.9rem;
+      color: #2c2c2ccc;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+
+.container-section {
+  // background-color: antiquewhite;
+  .background-continer-div {
+    position: relative; // base para el absolute de .continer-div
+
+    @include mixins.grid-container(750px, 750px);
+    .space1 {
+      background: none;
+    }
+    .continer-div {
+        box-sizing: border-box;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); // centra vertical y horizontal
+
+      position: absolute; // flota encima del grid
+
+      @include mixins.flex-container(row, center, center);
+      gap: 100px;
+      .pic-style {
+        @include mixins.img-style(700px, 500px, cover);
+      }
+      .pic-style1 {
+        @include mixins.img-style1(300px, 400px, cover);
+      }
+      // none
+    }
   }
 }

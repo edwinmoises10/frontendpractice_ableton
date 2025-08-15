@@ -57,3 +57,49 @@
     z-index: 10;
   }
 }
+
+// Selection
+
+// li:not(.no-selection)::selection {
+//   background-color: #0000ff;
+//   color: #ffffff;
+// }
+
+// a:not(.no-selection)::selection {
+//   background-color: #0000ff;
+//   color: #ffffff;
+// }
+
+
+li:not(.no-selection),
+a:not(.no-selection) {
+  &::selection {
+    background-color: #0000ff;
+    color: #ffffff;
+  }
+}
+
+// a.no-selection::selection {
+//   background-color: transparent;
+//   color: inherit;
+// }
+// h1.no-select::selection {
+//   background-color: transparent;
+//   color: inherit;
+// }
+
+.no-select,
+.no-selection {
+  &::selection {
+    background-color: transparent;
+  }
+}
+
+// h1.no-select {
+//   cursor: default; /* cursor flecha normal */
+//   user-select: none; /* no permite seleccionar texto */
+// }
+.no-select {
+  cursor: default;
+  user-select: none;
+}

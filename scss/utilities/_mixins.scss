@@ -9,6 +9,11 @@
   height: $height;
   object-fit: $img_aspect;
 }
+@mixin img-style1($width, $height, $img_aspect) {
+  width: $width;
+  height: $height;
+  object-fit: $img_aspect;
+}
 
 @mixin logo-style($img_aspect) {
   object-fit: $img_aspect;
@@ -19,4 +24,22 @@
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+@mixin grid-container($grid-height-space1,$grid-height-space2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: " space1 space2";
+  height: 100%;
+  .space1 {
+    grid-area: space1;
+    background: #985c0d;
+    height: $grid-height-space1; // ejemplo de altura
+  }
+
+  .space2 {
+    grid-area: space2;
+    background: #fbffa7;
+    height: $grid-height-space2;
+    padding-left: 500px;
+  }
 }
