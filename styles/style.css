@@ -112,7 +112,7 @@ main {
   text-align: justify;
 }
 .about-section .container .about-text {
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 1.5;
   letter-spacing: -0.3px;
 }
@@ -125,7 +125,7 @@ main {
   cursor: pointer;
 }
 .about-section .container .about-text1 {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   color: rgba(44, 44, 44, 0.8);
   letter-spacing: -0.3px;
 }
@@ -153,6 +153,7 @@ main {
 }
 .container-section .background-continer-div .continer-div {
   box-sizing: border-box;
+  gap: 100px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -169,8 +170,8 @@ main {
   object-fit: cover;
 }
 .container-section .background-continer-div .continer-div .pic-style1 {
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   object-fit: cover;
 }
 
